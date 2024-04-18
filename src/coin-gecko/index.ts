@@ -45,6 +45,7 @@ export class CoinGecko {
         )
       ).json();
 
+      // @ts-ignore
       for (const [key, value] of Object.entries(response)) {
         for (let i = 0; i < contractAddresses.length; i++) {
           const mappedKey = getAddress(key);
